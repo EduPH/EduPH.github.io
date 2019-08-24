@@ -49,9 +49,7 @@ text](https://miro.medium.com/proxy/1*-a-flCLHLCGM0-7TOcNJnQ.png)
 As we can see in the picture, there are three layers of neurons, the
 first layer is an input layer, the second one is the so-called hidden
 layer, and the last one is the output layer. This ANNs can be written
-in a mathematical formula by ![eqn1](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/eqn1.png?raw=true)
-
-$$F(x)=\sum_{i=1}^{N} v_{i} \varphi\left(w_{i}^{T} x+b_{i}\right)$$
+in a mathematical formula by $$F(x)=\sum_{i=1}^{N} v_{i} \varphi\left(w_{i}^{T} x+b_{i}\right)$$
 
 
 
