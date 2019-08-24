@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
 
-### More Information
+Hey there! I am Eduardo, and I am a Ph.D. student at the University of
+Seville, Spain. I research Mathematics, specifically bridging
+Artificial Neural Networks with Computational Topology.
 
-A place to include any other types of information that you'd like to include about yourself.
+This blog aims to make my research more accessible. However, I might
+not tie myself to just the information in papers, but writing about
+any topic I find interesting (and that I feel like writing about).
 
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
