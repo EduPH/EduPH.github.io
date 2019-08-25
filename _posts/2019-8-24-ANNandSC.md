@@ -83,14 +83,19 @@ the original continuous function.
 > A simplicial complex $$K$$ is (roughly speaking) a data structure that is built by gluing
 small pieces called simplices: $$0$$-simplices are points, $$1$$-simplices are edges, $$2$$-simplices
 are triangles, $$3$$-simplices are tetrahedrons, and so on. This data structure is widely used to
-represent topological spaces. However, not all spaces are triangulable.
+represent topological spaces. However, not all spaces are triangulable.[^1]
 
-<side>"Computational Topology: An introduction" is a great book to consult about simplicial complexes and simplicial approximations, among other topics in computational topology.</side>
+[^1]:*Computational Topology: An introduction* is a great book to consult about simplicial complexes and simplicial approximations, among other topics in computational topology.
 
 Let us assume that we have two triangulable spaces $$X$$ and $$Y$$, and a continuous function $$g:X\rightarrow Y$$. 
 Then, we could obtain two simplicial complexes $$K$$ and $$L$$ from $$X$$ and $$Y$$, respectively. The question now is, 
 how can we define a function between these two simplicial complexes?
 
+> Maps between simplicial complexes are called **simplicial maps**. They are defined from simplices of a simplicial complex to simplices of another (or the same) simplicial complex. Then, it can be extended to a continuous function by $$\sum_{i=0}^n b_i(x)\phi(u_i) $$ where $$b_i(x)$$ are the barycentric coordinates of $$x$$, and $$\phi$$ is the map defined between vertices of simplicial complexes.
+
+Besides, there exists a *simplicial approximation theorem* that states: for any continuous function there exists a simplicial approximation. However, barycentric subdivision of the given triangulations are needed to get an approximation as accurate as desired. We can take the following example from [(Edelsbrunner et. al)](https://www.researchgate.net/publication/220692408_Computational_Topology_An_Introduction).
+
+![img](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/simplicial_approximation_computationaltopology.PNG?raw=true)
 
 
 
