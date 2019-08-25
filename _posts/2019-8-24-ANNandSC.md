@@ -85,7 +85,7 @@ small pieces called simplices: $$0$$-simplices are points, $$1$$-simplices are e
 are triangles, $$3$$-simplices are tetrahedrons, and so on. This data structure is widely used to
 represent topological spaces. However, not all spaces are triangulable.
 
-<side></side>
+<side>"Computational Topology: An introduction" is a great book to consult about simplicial complexes and simplicial approximations, among other topics in computational topology.</side>
 
 Let us assume that we have two triangulable spaces $$X$$ and $$Y$$, and a continuous function $$g:X\rightarrow Y$$. 
 Then, we could obtain two simplicial complexes $$K$$ and $$L$$ from $$X$$ and $$Y$$, respectively. The question now is, 
