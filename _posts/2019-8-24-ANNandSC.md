@@ -3,14 +3,6 @@ layout: post
 title: Artificial Neural Networks and Simplicial Complexes
 ---
 
-This post is under construction, so you are reading a preliminary
-version...
-
-![alt
-text](https://github.com/EduPH/eduph.github.io/blob/master/images/404.jpg?raw=true)
-
-
-
 In this post, I would like to describe a little bit our first approach
 to give a constructive solution to the Universal Approximation
 theorem. This approach is developed in a formal taste in the following
@@ -93,13 +85,13 @@ how can we define a function between these two simplicial complexes?
 
 > Maps between simplicial complexes are called **simplicial maps**. They are defined from simplices of a simplicial complex to simplices of another (or the same) simplicial complex. Then, it can be extended to a continuous function by $$\sum_{i=0}^n b_i(x)\phi(u_i) $$ where $$b_i(x)$$ are the barycentric coordinates of $$x$$, and $$\phi$$ is the map defined between vertices of simplicial complexes.
 
-Besides, there exists a *simplicial approximation theorem* that states: for any continuous function there exists a simplicial approximation. However, barycentric subdivision of the given triangulations are needed to get an approximation as accurate as desired. We can take the following example from [(Edelsbrunner et. al)](https://www.researchgate.net/publication/220692408_Computational_Topology_An_Introduction).
+Besides, there exists a *simplicial approximation theorem* that states: for any continuous function there exists a simplicial approximation. However, barycentric subdivision of the given triangulations are needed to satisfy the conditions of the theorem. We can take the following example from [(Edelsbrunner et. al)](https://www.researchgate.net/publication/220692408_Computational_Topology_An_Introduction).
 
 ![img](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/simplicial_approximation_computationaltopology.PNG?raw=true)
 
-In this image we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the right simplicial complex. Finally, it is approximated by the simplicial approximation. However, in most cases, barycentric subdivision will be needed to satisfy a star condition in the domain simplicial complex.
+In this image we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the simplicial complex at the right. Finally, it is approximated by the simplicial approximation. However, in most cases, barycentric subdivision will be needed to satisfy a star condition in the domain simplicial complex.
 
-In our case, we need to do barycentric subdivision to both simplicial complexes. The reason is that we desire to get a tight approximation to continuous functions. Therefore, we need to get a tight mesh in the image simplicial complex, having then a closer simplicial approximation. Let us summarize:
+In our case, we need to do barycentric subdivision to both simplicial complexes. The reason is that we desire to get a tight approximation of a continuous function. Therefore, we need to get a tight mesh in the image simplicial complex, having then a closer simplicial approximation. Let us summarize:
 
 > Having two triangulable spaces $$X$$ and $$Y$$. We can obtain two triangulations $$K$$ and $$L$$ of $$X$$ and $$Y$$, respectively. Then, if we want to approximate a continuous function $$g:X\rightarrow Y$$, we can find $$t_1$$ and $$t_2$$ such that $$f:Sd^{t_1}K\rightarrow Sd^{t_2}L$$ is a simplicial approximation of $$g$$, and it is as close as we want. Where $$Sd^t$$ denotes the $$t$$-th barycentric subdivision.
 
@@ -116,6 +108,10 @@ At this point, you might have an idea of what the relationship between ANN and s
 We are assuming here that the input data is $$n$$-dimensional. Then, the first hidden layer receive the barycentric coordinates of the input data, but for each maximal simplex of the input triangulation. The next hidden layer receive the output of the simplicial map in barycentric coordinates. Finally, the output layer combine these coordinates to cartesian coordinates with the following activation function $$\frac{\sum_{j=1}^{\ell} z_{j} \psi\left(y_{j}\right)}{\sum_{j=1}^{\ell} y_{j}} $$ where $$\psi(y_j)=1$$ if all the coordinates of $$y_j$$ are equal to or greater than $$0$$. This last activation function combines all the barycentric coordinates of each maximal simplex of the image simplicial complex. 
 
 Therefore, to compute the weights is not needed to do any kind of training but determine the right matrices and bias terms to do the coordinates transformations. Besides, the weights between the first and second hidden layer are clearly determined by the simplicial map.
+
+### Conclusions 
+
+This research tries to give a constructive approach to a version of the Universal Approximation theorem. However, we had to use a deeper architecture than the one used by this theorem, and restrict the case of study to triangulable spaces. I hope you enjoyed this post, and remember that for references or a more formal explanation of the topic you can check the paper in arXiv.
 
 
 
