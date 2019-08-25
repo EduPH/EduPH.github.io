@@ -111,7 +111,7 @@ Therefore, to compute the weights is not needed to do any kind of training but d
 
 ### Conclusions 
 
-This research tries to give a constructive approach to a version of the Universal Approximation theorem. However, we had to use a deeper architecture than the one used by this theorem, and restrict the case of study to triangulable spaces. I hope you enjoyed this post, and remember that for references or a more formal explanation of the topic you can check the paper in arXiv.
+This research tries to give a constructive approach to a version of the Universal Approximation theorem. However, we had to use a deeper architecture than the one used by this theorem, and restrict the case of study to triangulable spaces. I hope you enjoyed this post, and remember that for references or a more formal explanation of the topic you can check the paper on arXiv.
 
 
 
