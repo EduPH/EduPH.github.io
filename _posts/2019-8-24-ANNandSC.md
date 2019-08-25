@@ -13,19 +13,21 @@ text](https://github.com/EduPH/eduph.github.io/blob/master/images/404.jpg?raw=tr
 
 In this post, I would like to describe a little bit our first approach
 to give a constructive solution to the Universal Approximation
-theorem. This approach is developed in a formal tase in the following
-preprint: ["Two-hidden-layer Feedforward Neural Networks are Universal Approximators: A Constructive Approach"](https://arxiv.org/pdf/1907.11457.pdf). Those who have studied a little about Machine Learning, and
-Artificial Neural Networks (ANNs)  should know about the Universal Approximation
+theorem. This approach is developed in a formal taste in the following
+preprint: ["Two-hidden-layer Feedforward Neural Networks are Universal Approximators: A Constructive Approach"](https://arxiv.org/pdf/1907.11457.pdf).
+
+Those who have studied a little about Machine Learning, and
+Artificial Neural Networks (ANNs) should know about the Universal Approximation
 theorem. It states, roughly speaking, that an ANN with only one hidden
 layer can approximate any continuous function (with some
-constraints) as closely as we desired. The traditional proofs were
+constraints), as closely as we desired. The traditional proofs were
 based in existence arguments, i.e. these proofs state that there is
 one but with no clue about how many neurons (or units) the ANN should
-have in this hidden layer. 
+have in the hidden layer. 
 
 So, let us begin with an informal introduction to this Universal
 Approximation theorem and our version of it. We did not pretend to
-solve it, but we restrict ourselves to a smaller version of it, and,
+solve it, but we restricted ourselves to a smaller version of it, and,
 using simplicial complexes, we gave this constructive version of the
 proof.
 
@@ -75,7 +77,7 @@ triangulation.
 Simplicial complexes will be our main structure ([^1]). If we want to approximate a continuous
 function from a given space $$X\subset \mathbb{R}^n$$ to $$Y\subset \mathbb{R}^m$$, we
 need a more simple representation of $$X$$ and $$Y$$. So, if $$X$$ and $$Y$$ are triangulable,
-and we know that triangulation, we can build a continuous function that **approximates**
+and we know that triangulation, we can build a continuous function that *approximates*
 the original continuous function.
 
 > A simplicial complex $$K$$ is (roughly speaking) a data structure that is built by gluing
