@@ -74,7 +74,7 @@ triangulation.
 
 ### Simplicial Complexes
 
-Simplicial complexes will be our main structure. If we want to approximate a continuous
+Simplicial complexes will be our main structure[^1]. If we want to approximate a continuous
 function from a given space $$X\subset \mathbb{R}^n$$ to $$Y\subset \mathbb{R}^m$$, we
 need a more simple representation of $$X$$ and $$Y$$. So, if $$X$$ and $$Y$$ are triangulable,
 and we know that triangulation, we can build a continuous function that **approximates**
@@ -83,7 +83,7 @@ the original continuous function.
 > A simplicial complex $$K$$ is (roughly speaking) a data structure that is built by gluing
 small pieces called simplices: $$0$$-simplices are points, $$1$$-simplices are edges, $$2$$-simplices
 are triangles, $$3$$-simplices are tetrahedrons, and so on. This data structure is widely used to
-represent topological spaces. However, not all spaces are triangulable.[^1]
+represent topological spaces. However, not all spaces are triangulable.
 
 [^1]:*Computational Topology: An introduction* is a great book to consult about simplicial complexes and simplicial approximations, among other topics in computational topology.
 
