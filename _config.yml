@@ -23,7 +23,7 @@ footer-links:
   flickr:
   github: eduph
   instagram:
-  linkedin:
+  linkedin: eduardo-paluzo-hidalgo-88027a148
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: epaluzohidalgo
@@ -37,7 +37,7 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: UA-146395004-1
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
