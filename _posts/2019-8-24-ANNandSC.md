@@ -97,6 +97,8 @@ Besides, there exists a *simplicial approximation theorem* that states: for any 
 
 ![img](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/simplicial_approximation_computationaltopology.PNG?raw=true)
 
+In this image we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the right simplicial complex. Finally, it is approximated by the simplicial approximation.
+
 
 
 
