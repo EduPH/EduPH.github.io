@@ -80,7 +80,7 @@ need a more simple representation of $$X$$ and $$Y$$. So, if $$X$$ and $$Y$$ are
 and we know that triangulation, we can build a continuous function that **approximates**
 the original continuous function.
 
-A simplicial complex $$K$$ is (roughly speaking) a data structure that is built by gluing
+> A simplicial complex $$K$$ is (roughly speaking) a data structure that is built by gluing
 small pieces called simplices: $$0$$-simplices are points, $$1$$-simplices are edges, $$2$$-simplices
 are triangles, $$3$$-simplices are tetrahedrons, and so on. This data structure is widely used to
 represent topological spaces. However, not all spaces are triangulable.
