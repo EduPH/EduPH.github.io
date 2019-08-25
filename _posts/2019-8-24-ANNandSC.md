@@ -54,25 +54,42 @@ layer, and the last one is the output layer. This ANNs can be written
 in a mathematical formula by $$F(x)=\sum_{i=1}^{N} v_{i}
 \varphi\left(w_{i}^{T} x+b_{i}\right)$$ where $$\varphi$$ is an
 activation function, $$b_i$$ is the bias term, and $$w_i$$ are the
-weights. The Universal Approximation theorem claims that for any
+weights. The Universal Approximation theorem claims that any
 continuous function from a compact to $$\mathbb{R}$$ can be
 approximated by one of these ANNs with just one hidden layer. However,
 as mentioned above, there is no clue about how many neurons must
-compose this hidden layer. 
+compose the hidden layer. 
 
 In our case, we will get a more difficult ANN architecture. We will
 use two hidden layers that will have a very specific commitment. The
-idea is very simple. Having a triangulation of a given space, we will
+idea is very simple: having a triangulation of a given space, we will
 obtain its barycentric coordinates with the first hidden layer. Then,
 in the second hidden layer, we will approximate the continuous
 function by a simplicial approximation (whatever it is, we will
-explain more below). Then, we recover the cartesian coordinates. In
+explain below). Then, we recover the cartesian coordinates. In
 our case, we can approximate any continuous function from a space
 $$X$$ to a space $$Y$$. However, it is important for us that both
 spaces are triangulable. Besides, sometimes is not easy to get such a
 triangulation.
 
 ### Simplicial Complexes
+
+Simplicial complexes will be our main structure. If we want to approximate a continuous
+function from a given space $$X\subset \mathbb{R}^n$$ to $$Y\subset \mathbb{R}^m$$, we
+need a more simple representation of $$X$$ and $$Y$$. So, if $$X$$ and $$Y$$ are triangulable,
+and we know that triangulation, we can build a continuous function that **approximates**
+the original continuous function.
+
+A simplicial complex $$K$$ is (roughly speaking) a data structure that is built by gluing
+small pieces called simplices: $$0$$-simplices are points, $$1$$-simplices are edges, $$2$$-simplices
+are triangles, $$3$$-simplices are tetrahedrons, and so on. This data structure is widely used to
+represent topological spaces. However, not all spaces are triangulable.
+
+<side></side>
+
+Let us assume that we have two triangulable spaces $$X$$ and $$Y$$, and a continuous function $$g:X\rightarrow Y$$. 
+Then, we could obtain two simplicial complexes $$K$$ and $$L$$ from $$X$$ and $$Y$$, respectively. The question now is, 
+how can we define a function between these two simplicial complexes?
 
 
 
