@@ -97,7 +97,19 @@ Besides, there exists a *simplicial approximation theorem* that states: for any 
 
 ![img](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/simplicial_approximation_computationaltopology.PNG?raw=true)
 
-In this image we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the right simplicial complex. Finally, it is approximated by the simplicial approximation.
+In this image we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the right simplicial complex. Finally, it is approximated by the simplicial approximation. However, in most cases, barycentric subdivision will be needed to satisfy a star condition in the domain simplicial complex.
+
+In our case, we need to do barycentric subdivision to both simplicial complexes. The reason is that we desire to get a tight approximation to continuous functions. Therefore, we need to get a tight mesh in the image simplicial complex, having then a closer simplicial approximation. Let us summarize:
+
+> Having two triangulable spaces $$X$$ and $$Y$$. We can obtain two triangulations $$K$$ and $$L$$ of $$X$$ and $$Y$$, respectively. Then, if we want to approximate a continuous function $$g:X\rightarrow Y$$, we can find $$t_1$$ and $$t_2$$ such that $$f:K^{t_1}\rightarrow L^{t_2}$$ is a simplicial approximation of $$g$$, and it is as close as we want.
+
+Finally, we should translate this simplicial approximation to a two hidden neural network.
+
+### Two hidden neural network and simplicial maps
+
+
+
+
 
 
 
