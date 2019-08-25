@@ -89,7 +89,7 @@ Besides, there exists a *simplicial approximation theorem* that states: for any 
 
 ![img](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/simplicial_approximation_computationaltopology.PNG?raw=true)
 
-In this image we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the simplicial complex at the right. Finally, it is approximated by the simplicial approximation. However, in most cases, barycentric subdivision will be needed to satisfy a star condition in the domain simplicial complex.
+In this image, we can see two simplicial complexes, one describing a circumference, and another circular crown alike. Then, a continuous deformation is done to the circumference, and it is embedded into the simplicial complex at the right. Finally, it is approximated by the simplicial approximation. However, in most cases, the barycentric subdivision will be needed to satisfy a star condition in the domain simplicial complex.
 
 In our case, we need to do barycentric subdivision to both simplicial complexes. The reason is that we desire to get a tight approximation of a continuous function. Therefore, we need to get a tight mesh in the image simplicial complex, having then a closer simplicial approximation. Let us summarize:
 
