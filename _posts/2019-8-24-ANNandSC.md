@@ -74,7 +74,7 @@ triangulation.
 
 ### Simplicial Complexes
 
-Simplicial complexes will be our main structure[^1]. If we want to approximate a continuous
+Simplicial complexes will be our main structure ([^1]). If we want to approximate a continuous
 function from a given space $$X\subset \mathbb{R}^n$$ to $$Y\subset \mathbb{R}^m$$, we
 need a more simple representation of $$X$$ and $$Y$$. So, if $$X$$ and $$Y$$ are triangulable,
 and we know that triangulation, we can build a continuous function that **approximates**
