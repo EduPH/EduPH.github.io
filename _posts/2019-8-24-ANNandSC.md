@@ -101,7 +101,7 @@ In this image we can see two simplicial complexes, one describing a circumferenc
 
 In our case, we need to do barycentric subdivision to both simplicial complexes. The reason is that we desire to get a tight approximation to continuous functions. Therefore, we need to get a tight mesh in the image simplicial complex, having then a closer simplicial approximation. Let us summarize:
 
-> Having two triangulable spaces $$X$$ and $$Y$$. We can obtain two triangulations $$K$$ and $$L$$ of $$X$$ and $$Y$$, respectively. Then, if we want to approximate a continuous function $$g:X\rightarrow Y$$, we can find $$t_1$$ and $$t_2$$ such that $$f:K^{t_1}\rightarrow L^{t_2}$$ is a simplicial approximation of $$g$$, and it is as close as we want.
+> Having two triangulable spaces $$X$$ and $$Y$$. We can obtain two triangulations $$K$$ and $$L$$ of $$X$$ and $$Y$$, respectively. Then, if we want to approximate a continuous function $$g:X\rightarrow Y$$, we can find $$t_1$$ and $$t_2$$ such that $$f:Sd^{t_1}K\rightarrow Sd^{t_2}L$$ is a simplicial approximation of $$g$$, and it is as close as we want. Where $$Sd^t$$ denotes the $$t$$-th barycentric subdivision.
 
 Finally, we should translate this simplicial approximation to a two hidden neural network.
 
