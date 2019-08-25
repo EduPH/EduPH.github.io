@@ -42,11 +42,9 @@ values for the weights.
 
 As we were explaining, an ANN is a computational graph. However, the
 Universal Approximation theorem traditionally restricts to the case of
-one hidden layer ANNs. To visually explain it, I will borrow the
-following picture from the post of [this link](https://blog.goodaudience.com/artificial-neural-networks-explained-436fcf36e75).
+one hidden layer ANNs. 
 
-![alt
-text](https://miro.medium.com/proxy/1*-a-flCLHLCGM0-7TOcNJnQ.png)
+![img0](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/ANN.PNG?raw=true)
 
 As we can see in the picture, there are three layers of neurons, the
 first layer is an input layer, the second one is the so-called hidden
@@ -107,9 +105,15 @@ Finally, we should translate this simplicial approximation to a two hidden neura
 
 ### Two hidden neural network and simplicial maps
 
+At this point, you might have an idea of what the relationship between ANN and simplicial map is. Once we have a simplicial map, that is a simplicial approximation of a given continuous function, we can translate it into two hidden layers. 
 
 
+![img2](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/ANN_simpmap.PNG?raw=true)
 
+
+We are assuming here that the input data is $$n$$-dimensional. Then, the first hidden layer receive the barycentric coordinates of the input data, but for each maximal simplex of the input triangulation. The next hidden layer receive the output of the simplicial map in barycentric coordinates. Finally, the output layer combine these coordinates to cartesian coordinates with the following activation function $$\frac{\sum_{j=1}^{\ell} z_{j} \psi\left(y_{j}\right)}{\sum_{j=1}^{\ell} y_{j}} $$ where $$\psi(y_j)=1$$ if all the coordinates of $$y_j$$ are equal to or greater than $$0$$. This last activation function combines all the barycentric coordinates of each maximal simplex of the image simplicial complex. 
+
+Therefore, to compute the weights is not needed to do any kind of training but determine the right matrices and bias terms to do the coordinates transformations. Besides, the weights between the first and second hidden layer are clearly determined by the simplicial map.
 
 
 
