@@ -61,7 +61,7 @@ function by a simplicial approximation (whatever it is, we will
 explain below). Then, we recover the cartesian coordinates. In
 our case, we can approximate any continuous function from a space
 $$X$$ to a space $$Y$$. However, it is important for us that both
-spaces are triangulable. Besides, sometimes is not easy to get such a
+spaces are triangulable. Besides, sometimes it is not easy to get such a
 triangulation.
 
 ### Simplicial Complexes
