@@ -22,9 +22,15 @@ Hence we can say that all datasets are representative, but we can quantify how *
 
 ### How can we obtain a representative subset?
 
-There might exist a huge range of possibilities. However, I will explain here the one in the papers we are dealing with. It is a graph approximation of the problem. Since we want to keep a closeness relation between the full dataset and the subset, we get a proximity graph with a given $$\epsilon$$ which is the representativeness parameter. Once we have this graph representation, we can find a dominating dataset[^1], guaranteeing that each point of the subset is close to, at least, one of the full dataset. We can see this in the following picture (red points are the dominating dataset).
+There might exist a huge range of possibilities. However, I will explain here the one in the papers we are dealing with. It is a graph approximation of the problem. Since we want to keep a closeness relation between the full dataset and the subset, we get a proximity graph with a given $$\epsilon$$ which is the representativeness parameter. Once we have this graph representation, we can find a dominating dataset[^1], guaranteeing that each point of the subset is close to, at least, one of the full dataset. We can see this in the following picture (red points are the dominating dataset). This algorithm has complexity $$O(|X^2|+|X||E|)$$
 
-[^1]: A dominating dataset is 
+[^1]: There exist different algorithms to find a dominating dataset of a given graph. It is a NP-problem so we decided to apply the algorithm proposed in **David W. Matula. Determining edge connectivity in o(nm). In FOCS, pages 249–251. IEEE Computer Society,
+1987.** with complexity $$O(|X||E|)$$. 
 
 ![proximity](https://github.com/EduPH/eduph.github.io/blob/master/images/post2/proximity_graph.PNG?raw=true)
 
+> A dominating dataset of a graph is a subset of nodes such that all of the nodes of the graph are adjacent to, at least, one node of the dominating dataset.
+
+### How this affects neural networks?
+
+When we are working with neural networks, the training process can be large. The motivation of representative datasets is to be able to reach similar performance but with less data. Neural networks are commonly trained with local search algorithms, and 
