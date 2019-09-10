@@ -48,7 +48,13 @@ The study of homology through a filtration function is called persistent homolog
 
 If we save the birth of the homology classes and when they die when they merge with an older component (a component that has lived for longer) as a pair $$(b,d)$$, we can draw these pair in two dimensions, obtaining a persistence diagram. 
 
-(AAA) Bottleneck distance
+![persistence_diagram](https://i.imgur.com/WmQPYnn.png)
+
+A persistence diagrams can be considered like a *signature*, and these signatures can be compared. Different distances can be defined between persistence diagrams. One of them is the bottleneck distance defined as the infimum of the supremum of the infinity norms of all possible bijections between the persistence diagrams.
+
+![bottleneck](http://gudhi.gforge.inria.fr/python/latest/_images/perturb_pd.png)
+
+
 
 ### Conclusions
 
