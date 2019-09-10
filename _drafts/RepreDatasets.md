@@ -42,9 +42,13 @@ Then, we follow to bound the difference between the errors by this *representati
 
 ### Persistent homology application
 
-The study of homology through a filtration function is called persistent homology. A filtration function is, roughly speaking, a way to look in an ordered and accumulative way some dataset. One example, that is the one we use here, is Vietoris-Rips. We take $$n$$ dimensional balls centered in each ball. Then, the radius of these balls increased through a parameter. The nodes whose *balls* intersect get connected. Then, in an incremental process, edges, triangles, and simplicial complexes of different dimensions appear when different number of nodes are connected. 
+The study of homology through a filtration function is called persistent homology. A filtration function is, roughly speaking, a way to look in an ordered and accumulative way some dataset. One example, that is the one we use here, is Vietoris-Rips. We take $$n$$ dimensional balls centered in each ball. Then, the radius of these balls increased through a parameter. The nodes whose *balls* intersect get connected. Then, in an incremental process, edges, triangles, and simplicial complexes of different dimensions appear when different number of nodes are connected. An example is shown in the following gif stolen from this [link](https://aqjaffe.github.io/VRPolygons/index.html).
 
 ![gif](https://aqjaffe.github.io/VRPolygons/assets/CechFiltration.gif)
+
+If we save the birth of the homology classes and when they die when they merge with an older component (a component that has lived for longer) as a pair $$(b,d)$$, we can draw these pair in two dimensions, obtaining a persistence diagram. 
+
+(AAA) Bottleneck distance
 
 ### Conclusions
 
