@@ -29,8 +29,22 @@ There might exist a huge range of possibilities. However, I will explain here th
 
 ![proximity](https://github.com/EduPH/eduph.github.io/blob/master/images/post2/proximity_graph.PNG?raw=true)
 
-> A dominating dataset of a graph is a subset of nodes such that all of the nodes of the graph are adjacent to, at least, one node of the dominating dataset.
+> A **dominating dataset** of a graph is a subset of nodes such that all of the nodes of the graph are adjacent to, at least, one node of the dominating dataset.
 
 ### How this affects neural networks?
 
-When we are working with neural networks, the training process can be large. The motivation of representative datasets is to be able to reach similar performance but with less data. Neural networks are commonly trained with local search algorithms, and 
+When we are working with neural networks, the training process can be large. The motivation of representative datasets is to be able to reach similar performance but with fewer data. Neural networks are commonly trained with local search algorithms and if the dataset is smaller it will take less time to use the full dataset. Therefore, we would get faster training. We desire what is represented in the following picture. If we consider the error surfaces (the surface defined by the error function that measures how far is our model from a right classification) with the same architecture and same weights on the full dataset and on their representative subset, they should be close. Besides, *good* representative parameter should imply this *small* difference in the error. In  the picture: $$\epsilon$$ is the representative parameter, $$\delta$$ is how far is the performance, $$w$$ represents the architecture and the weights, $$E$$ and $$\tilde{E}$$ are the error surfaces.
+
+![error_lemma](https://github.com/EduPH/eduph.github.io/blob/master/images/post2/error_lemma.PNG?raw=true)
+
+Then, we follow to bound the difference between the errors by this *representative parameter*. The study was done in-depth (in a mathematical way) for the case of perceptrons, and with experiments for different neural networks architectures. I hope we will be able to give more general results for any architecture...one day.
+
+
+### Persistent homology application
+
+
+
+### Conclusions
+
+
+
