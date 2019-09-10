@@ -4,8 +4,27 @@ title: Representative Datasets for Neural Networks
 ---
 
 
-Data is the main motivation of all machine learning technic. We deal with data in order to find correlations and infer properties from this data. In this post, I would like to introduce the notion of representative dataset. It was firstly proposed in the paper: ["Representative datasets for neural networks"](http://congreso.us.es/dmd2018/wp-content/uploads/2018/05/DMD2018_paper_19.pdf), and lately, a deeper approximation was done for the specific case of perceptrons in  ["Representative Datasets: The Perceptron Case"](https://arxiv.org/abs/1903.08519). As in the previous post, I do not pretend to do a deep explanation of these papers, just an informal taste of it. 
+Data is the main motivation of all machine learning technic. We deal with data to find correlations and infer properties from this data. In this post, I would like to introduce the notion of a representative dataset. It was firstly proposed in the paper: ["Representative datasets for neural networks"](http://congreso.us.es/dmd2018/wp-content/uploads/2018/05/DMD2018_paper_19.pdf), and lately, a deeper approximation was done for the specific case of perceptrons in  ["Representative Datasets: The Perceptron Case"](https://arxiv.org/abs/1903.08519). As in the previous post, I do not pretend to do a deep explanation of these papers, just an informal taste of it. 
 
 ### Representative Datasets
 
-Datasets are, nowadays, massive. Hence, the storage of this data, and the time needed to process it, is a problem to be solved. Representative datasets are by definition just a subset of a dataset with some kind of closeness relation with the original dataset. 
+Datasets are, nowadays, massive. Hence, the storage of this data and the time needed to process it is a problem to be solved. 
+
+> Representative datasets are by definition just a subset of a dataset with some kind of closeness relation with the original dataset. 
+
+Let us be a bit more formal for a moment. A dataset is a set of pairs $$(x,c)$$ where $$x$$ is a point in $$\mathbb{R}^n$$ and $$c$$ is a label, i.e., the class where $$x$$ belongs. Then, we can take a subset of these pairs and if all points in the subset are close to at least one point of the full dataset, it is called representative. Besides, we consider that the definition of representative datasets should be invariant under isometric transformations of the dataset. Therefore, if there exists an isometric transformation by which the subset is representative, this subset will be considered to be representative. In the following three pictures: the first one is the original dataset, and the other two can be considered representative datasets. However, one of them is *more* representative than the other. In the second figure, the range of *bad* possible outputs of a neural network is wider than in the third figure.
+
+![representative](https://raw.githubusercontent.com/EduPH/eduph.github.io/master/images/post2/representative.PNG)
+
+Hence we can say that all datasets are representative, but we can quantify how *good* is its representativeness.
+
+> In general we will have to balance how many points we erase from the full dataset and how *representative* is the subset. Less points will imply, in general, a worse representation of the original dataset.
+
+### How can we obtain a representative subset?
+
+There might exist a huge range of possibilities. However, I will explain here the one in the papers we are dealing with. It is a graph approximation of the problem. Since we want to keep a closeness relation between the full dataset and the subset, we get a proximity graph with a given $$\epsilon$$ which is the representativeness parameter. Once we have this graph representation, we can find a dominating dataset[^1], guaranteeing that each point of the subset is close to, at least, one of the full dataset. We can see this in the following picture (red points are the dominating dataset).
+
+[^1]: A dominating dataset is 
+
+![proximity](https://github.com/EduPH/eduph.github.io/blob/master/images/post2/proximity_graph.PNG?raw=true)
+
