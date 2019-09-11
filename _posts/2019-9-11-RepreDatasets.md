@@ -73,9 +73,14 @@ A persistence diagrams can be considered like a *signature*, and these signature
   <img width="400"  src="http://gudhi.gforge.inria.fr/python/latest/_images/perturb_pd.png">
 </p>
 
+You may wonder why are we introducing all these concepts of persistent homology. The reason is that the $$\epsilon$$ is difficult to compute and by $$\epsilon$$ I mean the representativeness parameter. However, it can be upper and lower bounded by the bottleneck distance and Hausdorff distance. Specifically, half of the bottleneck distance between the persistence diagrams are a lower bound and the Hausdorff distance is an upper bound. The value of the representativeness dataset is equal to the Gromov-Hausdorff distance between the sets (but is hard to compute!). So, once we are given a dataset and we want to check how representative is from another, we can use these two measures to bound and approximate the representativeness.
 
 
 ### Conclusions
+
+There are a lot more to do, but there are strong results for the perceptron case. However, even if it may be difficult to build a general theory for any kind of architecture (might be impossible), I think it could be approachable and interesting to find the effects of reducing datasets to get a better time on the execution of training and even reduce the needed storage. Furthermore, it might have applications to the unbalance problem for classification tasks, and so on. As usual, for a more technical approach to this post theme, you can check the papers.
+
+
 
 
 
