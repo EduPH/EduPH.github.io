@@ -3,11 +3,7 @@ layout: post
 title: Representative Datasets for Neural Networks
 ---
 
-
-![working](https://github.com/EduPH/eduph.github.io/blob/master/images/404.jpg?raw=true)
-
-
-Data is the main motivation of all machine learning technic. We deal with data to find correlations and infer properties from this data. In this post, I would like to introduce the notion of a representative dataset. It was firstly proposed in the paper: ["Representative datasets for neural networks"](http://congreso.us.es/dmd2018/wp-content/uploads/2018/05/DMD2018_paper_19.pdf), and lately, a deeper approximation was done for the specific case of perceptrons in  ["Representative Datasets: The Perceptron Case"](https://arxiv.org/abs/1903.08519). As in the previous post, I do not pretend to do a deep explanation of these papers, just an informal taste of it. 
+Data is the main motivation of all machine learning technic. We deal with data to find correlations and infer properties from this data. In this post, I would like to introduce the notion of a representative dataset. It was firstly proposed in the paper: ["Representative datasets for neural networks"](http://congreso.us.es/dmd2018/wp-content/uploads/2018/05/DMD2018_paper_19.pdf), and lately, a deeper approximation was done for the specific case of perceptrons in  ["Representative Datasets: The Perceptron Case"](https://arxiv.org/abs/1903.08519). As in the previous post, I do not pretend to do a deep explanation of these papers, just an informal taste of them. 
 
 ### Representative Datasets
 
@@ -24,7 +20,7 @@ Let us be a bit more formal for a moment. A dataset is a set of pairs $$(x,c)$$ 
 
 Hence we can say that all datasets are representative, but we can quantify how *good* is its representativeness.
 
-> In general we will have to balance how many points we erase from the full dataset and how *representative* is the subset. Less points will imply, in general, a worse representation of the original dataset.
+> In general we will have to balance how many points we erase from the full dataset and how *representative* is the subset. Less points in the subset will imply, in general, a worse representation of the original dataset.
 
 ### How can we obtain a representative subset?
 
@@ -54,31 +50,31 @@ Then, we follow to bound the difference between the errors by this *representati
 
 ### Persistent homology application
 
-The study of homology through a filtration function is called persistent homology. A filtration function is, roughly speaking, a way to look in an ordered and accumulative way some dataset. One example, that is the one we use here, is Vietoris-Rips. We take $$n$$ dimensional balls centered in each ball. Then, the radius of these balls increased through a parameter. The nodes whose *balls* intersect get connected. Then, in an incremental process, edges, triangles, and simplicial complexes of different dimensions appear when different number of nodes are connected. An example is shown in the following gif stolen from this [link](https://aqjaffe.github.io/VRPolygons/index.html).
+The study of homology through a filtration function is called persistent homology. A filtration function is, roughly speaking, a way to look in an ordered and accumulative way some dataset. One example, that is the one we use here, is Vietoris-Rips. We take $$n$$ dimensional balls with its center on each point of the dataset. Then, the radius of these balls increase through a parameter. The nodes whose *balls* intersect get connected. Then, in an incremental process, edges, triangles, and simplicial complexes of different dimensions appear when different number of nodes are connected. An example is shown in the following gif stolen from this [link](https://aqjaffe.github.io/VRPolygons/index.html).
 
 <p align="center">
   <img width="500"  src="https://aqjaffe.github.io/VRPolygons/assets/CechFiltration.gif">
 </p>
 
-If we save the birth of the homology classes and when they die when they merge with an older component (a component that has lived for longer) as a pair $$(b,d)$$, we can draw these pair in two dimensions, obtaining a persistence diagram. 
+If we track the birth and death (when they die when they merge with an older component) of the homology classes as a pairs $$(b,d)$$, we can draw these pairs in two dimensions to obtain a persistence diagram. 
 
 
 <p align="center">
   <img width="700"  src="https://i.imgur.com/WmQPYnn.png">
 </p>
 
-A persistence diagrams can be considered like a *signature*, and these signatures can be compared. Different distances can be defined between persistence diagrams. One of them is the bottleneck distance defined as the infimum of the supremum of the infinity norms of all possible bijections between the persistence diagrams.
+A persistence diagrams can be considered like a *signature* of the dataset, and these signatures can be compared. Different distances can be defined between persistence diagrams. One of them is the bottleneck distance defined as the infimum of the supremum of the infinity norms of all possible bijections between the persistence diagrams.
 
 <p align="center">
   <img width="400"  src="http://gudhi.gforge.inria.fr/python/latest/_images/perturb_pd.png">
 </p>
 
-You may wonder why are we introducing all these concepts of persistent homology. The reason is that the $$\epsilon$$ is difficult to compute and by $$\epsilon$$ I mean the representativeness parameter. However, it can be upper and lower bounded by the bottleneck distance and Hausdorff distance. Specifically, half of the bottleneck distance between the persistence diagrams are a lower bound and the Hausdorff distance is an upper bound. The value of the representativeness dataset is equal to the Gromov-Hausdorff distance between the sets (but is hard to compute!). So, once we are given a dataset and we want to check how representative is from another, we can use these two measures to bound and approximate the representativeness.
+You may wonder why we are introducing all these concepts of persistent homology. The reason is that the $$\epsilon$$ is difficult to compute and by $$\epsilon$$ I mean the representativeness parameter. However, it can be upper and lower bounded by the bottleneck distance and the Hausdorff distance. Specifically, half of the bottleneck distance between the persistence diagrams are a lower bound and the Hausdorff distance is an upper bound. The value of the representativeness dataset is equal to the Gromov-Hausdorff distance between the sets (but is hard to compute!). So, once we are given a dataset and we want to check how representative is from another, we can use these two measures to bound and approximate the representativeness.
 
 
 ### Conclusions
 
-There are a lot more to do, but there are strong results for the perceptron case. However, even if it may be difficult to build a general theory for any kind of architecture (might be impossible), I think it could be approachable and interesting to find the effects of reducing datasets to get a better time on the execution of training and even reduce the needed storage. Furthermore, it might have applications to the unbalance problem for classification tasks, and so on. As usual, for a more technical approach to this post theme, you can check the papers.
+There are a lot more to do, but there are strong results for the perceptron case. However, even if it may be difficult to build a general theory for any kind of architecture (might be impossible), I think it could be approachable and interesting to find the effects of reducing datasets for different architectures to get a better time of the training execution  and even reduce the needed storage. Furthermore, it might have applications to the unbalance problem for classification tasks, and so on. As usual, for a more technical approach to this post theme, you can check the papers.
 
 
 
