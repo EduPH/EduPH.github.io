@@ -70,7 +70,7 @@ If we save the birth of the homology classes and when they die when they merge w
 A persistence diagrams can be considered like a *signature*, and these signatures can be compared. Different distances can be defined between persistence diagrams. One of them is the bottleneck distance defined as the infimum of the supremum of the infinity norms of all possible bijections between the persistence diagrams.
 
 <p align="center">
-  <img width="700"  src="http://gudhi.gforge.inria.fr/python/latest/_images/perturb_pd.png">
+  <img width="400"  src="http://gudhi.gforge.inria.fr/python/latest/_images/perturb_pd.png">
 </p>
 
 
