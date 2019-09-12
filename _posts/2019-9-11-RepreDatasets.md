@@ -26,7 +26,7 @@ Hence we can say that all datasets are representative, but we can quantify how *
 
 There might exist a huge range of possibilities. However, I will explain here the one in the papers we are dealing with. It is a graph approximation of the problem. Since we want to keep a closeness relation between the full dataset and the subset, we get a proximity graph with a given $$\epsilon$$ which is the representativeness parameter. Once we have this graph representation, we can find a dominating dataset[^1], guaranteeing that each point of the subset is close to, at least, one of the full dataset. We can see this in the following picture (red points are the dominating dataset). This algorithm has complexity $$O(|X^2|+|X||E|)$$.
 
-[^1]: There exist different algorithms to find a dominating dataset of a given graph. It is a NP-problem so we decided to apply the algorithm proposed in **David W. Matula. Determining edge connectivity in o(nm)** with complexity $$O(|X||E|)$$. 
+[^1]:There exist different algorithms to find a dominating dataset of a given graph. It is a NP-problem so we decided to apply the algorithm proposed in David W. Matula. Determining edge connectivity in o(nm). 
 
 <p align="center">
   <img width="900" src="https://github.com/EduPH/eduph.github.io/blob/master/images/post2/proximity_graph.PNG?raw=true">
