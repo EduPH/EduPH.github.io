@@ -102,7 +102,7 @@ Finally, we should translate this simplicial approximation to a two hidden neura
 At this point, you might have an idea of what the relationship between ANN and simplicial map is. Once we have a simplicial map, that is a simplicial approximation of a given continuous function, we can translate it into two hidden layers. 
 
 
-![img2](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/ANN_simpmap.PNG?raw=true)
+![img2](https://github.com/EduPH/eduph.github.io/blob/master/images/post1/ANN_simpmap.png?raw=true)
 
 
 We are assuming here that the input data is $$n$$-dimensional. Then, the first hidden layer receives the barycentric coordinates of the input data, but for each maximal simplex of the input triangulation. The next hidden layer receives the output of the simplicial map in barycentric coordinates. Finally, the output layer combine these coordinates to cartesian coordinates with the following activation function $$\frac{\sum_{j=1}^{\ell} z_{j} \psi\left(y_{j}\right)}{\sum_{j=1}^{\ell} y_{j}} $$ where $$\psi(y_j)=1$$ if all the coordinates of $$y_j$$ are equal to or greater than $$0$$. This last activation function combines all the barycentric coordinates of each maximal simplex of the image simplicial complex. 
