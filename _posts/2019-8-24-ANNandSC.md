@@ -6,9 +6,7 @@ title: Artificial Neural Networks and Simplicial Complexes
 In this post, I would like to describe a little bit our first approach
 to give a constructive solution to the Universal Approximation
 theorem. This approach is developed in a formal taste in the following
-preprint: ["Two-hidden-layer Feedforward Neural Networks are Universal Approximators: A Constructive Approach"](https://arxiv.org/pdf/1907.11457.pdf) 
-
-and published ["Eduardo Paluzo-Hidalgo, Rocio Gonzalez-Diaz, Miguel A. Gutiérrez-Naranjo,Two-hidden-layer feed-forward networks are universal approximators: A constructive approach, Neural Networks, Volume 131, 2020"](https://doi.org/10.1016/j.neunet.2020.07.021)).
+preprint: ["Two-hidden-layer Feedforward Neural Networks are Universal Approximators: A Constructive Approach"](https://arxiv.org/pdf/1907.11457.pdf) and published ["Eduardo Paluzo-Hidalgo, Rocio Gonzalez-Diaz, Miguel A. Gutiérrez-Naranjo,Two-hidden-layer feed-forward networks are universal approximators: A constructive approach, Neural Networks, Volume 131, 2020"](https://doi.org/10.1016/j.neunet.2020.07.021)).
 
 Those who have studied a little about Machine Learning, and
 Artificial Neural Networks (ANNs) should know about the Universal Approximation
