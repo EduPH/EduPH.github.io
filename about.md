@@ -5,8 +5,7 @@ permalink: /about/
 ---
 
 
-Hey there! I am Eduardo, and I am a Ph.D. student at the University of
-Seville, Spain. I do research in Mathematics, specifically bridging
+Hey there! I am Eduardo. I do research in Mathematics, specifically bridging
 Artificial Neural Networks with Computational Topology.
 
 This blog aims to make my research more accessible. However, I might
